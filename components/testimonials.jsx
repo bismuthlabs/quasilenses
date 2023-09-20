@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState, useEffect } from "react";
 
@@ -9,15 +9,13 @@ export default function Testimonials() {
       id: 1,
       avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
       name: "Sarah M",
-      quote:
-        "His ability to put you at ease makes the experience enjoyable.",
+      quote: "His ability to put you at ease makes the experience enjoyable.",
     },
     {
       id: 2,
       avatar: "https://randomuser.me/api/portraits/women/79.jpg",
       name: "Angela Stian",
-      quote:
-        "He has an essence of simplicity, yet are calm and real.",
+      quote: "He has an essence of simplicity, yet are calm and real.",
     },
     {
       id: 3,
@@ -32,8 +30,7 @@ export default function Testimonials() {
     const interval = setInterval(() => {
       setCurrentTestimonial((prevTestimonial) => {
         // Calculate the index of the next testimonial
-        const nextTestimonial =
-          (prevTestimonial + 1) % testimonials.length;
+        const nextTestimonial = (prevTestimonial + 1) % testimonials.length;
         return nextTestimonial;
       });
     }, 7000);
@@ -48,30 +45,32 @@ export default function Testimonials() {
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <ul>
-            {testimonials.map((item, idx) => (
-              currentTestimonial === idx && (
-                <li key={idx} 
-                className={`${
-                    currentTestimonial === idx ? "opacity-100" : "opacity-0"
-                  } transition-opacity duration-500`}
-                >
-                  <figure>
-                    <div className="flex gap-2 items-center">
-                        <img 
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOU2X9fnh7ghFVkRQ_4_F4jYXhMu9AmBzMmxPSpxF9q03BmATHNf3LuTfUCRRGBeUvsiE&usqp=CAU" 
-                        alt="" 
+            {testimonials.map(
+              (item, idx) =>
+                currentTestimonial === idx && (
+                  <li
+                    key={idx}
+                    className={`${
+                      currentTestimonial === idx ? "opacity-100" : "opacity-0"
+                    } transition-opacity duration-500`}
+                  >
+                    <figure>
+                      <div className="flex gap-2 items-center">
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOU2X9fnh7ghFVkRQ_4_F4jYXhMu9AmBzMmxPSpxF9q03BmATHNf3LuTfUCRRGBeUvsiE&usqp=CAU"
+                          alt=""
                         />
                         <blockquote>
-                        <p className="text-sm font-bold sm:text-sm">
+                          <p className="text-sm font-bold sm:text-sm">
                             “{item.quote}“
-                        </p>
-                        <p className="text-gray-600">@{item.name}</p>
+                          </p>
+                          <p className="text-gray-600">@{item.name}</p>
                         </blockquote>
-                    </div>
-                  </figure>
-                </li>
-              )
-            ))}
+                      </div>
+                    </figure>
+                  </li>
+                )
+            )}
           </ul>
         </div>
         <div className="mt-6">

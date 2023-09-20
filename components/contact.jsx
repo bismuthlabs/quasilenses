@@ -5,7 +5,7 @@ export default function Contact() {
 
       const bookingMessage = "Hi there! I'd like to book your photography services for an event on [Date]. Are you available? Thanks!";
       const encoded_url = encodeURIComponent(bookingMessage);
-      const whatsapp_url = `https://wa.me/${'233549250680'}/?text=${encoded_url}`; 
+      const whatsapp_url = `https://wa.me/${'233541010383'}/?text=${encoded_url}`; 
     
     return (
         <div className="flex justify-center gap-3">
@@ -18,7 +18,7 @@ export default function Contact() {
                 </div>
             </div>
             <div className="flex items-center gap-2 border py-1 px-2.5 bg-black text-white">
-                <a href={`https://wa.me/${'233549250680'}`} target='_black'>
+                <a href={`https://wa.me/${'233541010383'}`} target='_black'>
                     Say "Hi"
                 </a>
                 <div>
