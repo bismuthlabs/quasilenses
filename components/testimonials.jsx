@@ -7,19 +7,19 @@ export default function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+      avatar: "images/photo-7.jpg",
       name: "Sarah M",
       quote: "His ability to put you at ease makes the experience enjoyable.",
     },
     {
       id: 2,
-      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
+      avatar: "images/photo.8.jpg",
       name: "Angela Stian",
       quote: "He has an essence of simplicity, yet are calm and real.",
     },
     {
       id: 3,
-      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
+      avatar: "images/photo-9.jpg",
       name: "Karim Ahmed",
       quote:
         "He was professional from start to finish. I’m usually reluctant to get in front of the camera, but he did an amazing job at putting me at ease.",
@@ -33,7 +33,7 @@ export default function Testimonials() {
         const nextTestimonial = (prevTestimonial + 1) % testimonials.length;
         return nextTestimonial;
       });
-    }, 7000);
+    }, 9000);
 
     return () => {
       clearInterval(interval);
@@ -55,16 +55,19 @@ export default function Testimonials() {
                     } transition-opacity duration-500`}
                   >
                     <figure>
-                      <div className="flex gap-2 items-center">
-                        <img
-                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOU2X9fnh7ghFVkRQ_4_F4jYXhMu9AmBzMmxPSpxF9q03BmATHNf3LuTfUCRRGBeUvsiE&usqp=CAU"
+                      <div className="flex gap-2 items-center justify-center">
+                        {/* <img
+                          src={item.avatar}
+                          width={300}
+                          height={300}
+                          className=''
                           alt=""
-                        />
+                        /> */}
                         <blockquote>
-                          <p className="text-sm font-bold sm:text-sm">
+                          <p className="t-sm">
                             “{item.quote}“
                           </p>
-                          <p className="text-gray-600">@{item.name}</p>
+                          <p className="text-gray-600 text-sm">@{item.name}</p>
                         </blockquote>
                       </div>
                     </figure>
