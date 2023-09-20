@@ -33,7 +33,7 @@ export default function Testimonials() {
         const nextTestimonial = (prevTestimonial + 1) % testimonials.length;
         return nextTestimonial;
       });
-    }, 9000);
+    }, 15000);
 
     return () => {
       clearInterval(interval);
